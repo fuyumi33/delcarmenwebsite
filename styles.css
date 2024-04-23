@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+font-family: "Poppins", sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+scroll-padding-top: 2rem;
+scroll-behavior: smooth;
+text-decoration: none;
+}
+
+:root{
+  --text-color:#021f2a;
+  --bf-color:#fff;
+
+}
+html::-webkit-scrollbar{
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb{
+  background:transparent;
+
+}
+html::-webkit-scrollbar-track{
+  background-color: var(--text-color);
+  border-radius: 5rem;
+}
+section{
+  padding: 50px 100px;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+  list-style: none;
+ background-color: #fff;
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color:#0ba441;
+}
+.navbar{
+  display:flex;
+  column-gap: 2rem;
+
+}
+
+.navbar li{
+  position: relative;
+  
+  
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0baa41;
+  
+}
+.navbar a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color:  #0baa41;
+  position: absolute;
+  bottom: -4px;
+  left:0;
+  transition: 0.4s;
+}
+.navbar a:hover::after,.navbar .home-active::after{
+  width: 100%;
+}
+
+#menu-icon{
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
+}
+
+.container{
+  width: 100%;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 64px;
+}
+.container img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:unset;
+  object-position: center;
+}
+.news-updates {
+  display: flex;
+  flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+}
+
+.section-title {
+  width: 100%; /* Span full width */
+  padding: 1rem;
+  text-align: center; /* Center section title */
+  font-weight: bold; /* Make section title stand out 
+  */
+  font-size: 2rem;
+}
+
+.featured-story,
+.news-list {
+  width: 50%; /* Adjust width for each section on larger screens */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  /* Responsive adjustments for smaller screens */
+  .featured-story,
+  .news-list {
+    width: 100%; /* Make sections stack on top of each other */
+
+    
+  }
+  
+  .featured-story {
+    margin-bottom: 1rem; /* Add space between sections */
+  }
+  .video{
+width: 400px;
+margin-left: 0px;
+  }
+ 
+}
+@media (max-width: 786px) {
+  /* Responsive adjustments for smaller screens */
+  .news-list li div {
+    display: flex;
+    flex-direction: column; /* Stack image and span vertically */
+  }
+
+  .news-list li div img {
+    margin-bottom: 1rem; /* Add space between image and span */
+    width: 300px;;
+  }
+
+  
+}
+
+.news-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.news-list li div{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.news-list li img {
+  width: 200px; /* Adjust thumbnail size */
+  height: auto;
+  margin-right: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.featured-story img {
+  width: 100%; /* Adjust image size */
+  margin-bottom: 1rem;
+ 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.read-more-btn {
+  background-color: transparent; /* Transparent background */
+  color: #000; /* Black text color */
+  padding: 0.5rem 1rem; /* Adjust button padding */
+  border: 2px solid #000; /* Black outline border */
+  border-radius: 4px; /* Add button corners */
+  margin-top: 1rem; /* Add space above button */
+  cursor: pointer; /* Indicate clickable button */
+  
+}
+
+.read-more-btn:hover {
+  background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Add some hover effects for a nicer touch */
+.news-list li a:hover {
+  opacity: 0.8;
+}
+
+.hotline{
+  background: url(img/dchotlinebg.jpg.png) no-repeat;
+ background-size: cover;  
+ background-position: center;
+ background-attachment: fixed;
+}
+.hotline .hotlines-list{
+  max-width: 45rem;
+  
+  top:0;
+  padding: 5rem 0;
+}
+
+.hotline .hotlines-list img{
+ height: 100px;
+ width: 100px;
+}
+
+
+
+.tourist-stops {
+  text-align: center;  /* Center the content horizontally */
+  /* Add some margin for spacing */
+ 
+}
+
+
+.row {
+  display: flex;  /* Make rows behave as flex containers */
+  flex-wrap: wrap;  /* Allow items to wrap if needed */
+  justify-content: space-around;  /* Distribute items evenly */
+  margin-bottom: 2rem;  /* Add space between rows */
+}
+
+.stop-item {
+  width: 33%;  /* Set width for each stop item (33% for 3 columns) */
+  padding: 1rem;
+  border: 1px solid #ddd;  /* Add a light border */
+  border-radius: 5px;  /* Add rounded corners */
+  text-align: left;  /* Align stop content to the left */
+}
+
+.stop-item img {
+  width: 100%;  /* Fill the width of the stop item */
+  margin-bottom: 1rem;  /* Add space below the image */
+}
+
+.stop-item h3,
+.stop-item p {
+  margin: 0.5rem 0;  /* Add some margin for headings and text */
+}
+
+footer {
+  background-color: green;
+  color: white;  /* Light text color for better contrast */
+  padding: 1rem 2rem;  /* Add some padding for content */
+  text-align: center;  /* Center the content horizontally (optional) */
+  height: 600px;
+}
+
+.view-all-wrapper {
+  text-align: center;  /* Center the button horizontally */
+  margin-top: 2rem;  /* Add space above the button */
+}
+
+.view-all-btn {
+  /* Style the button as desired (color, background, etc.) */
+  padding: 1rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;  /* Indicate clickable behavior */
+}
+.heading{
+  text-align: center;
+}
+.heading h1{
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: black;
+}
+.places{
+  background-color: #f2f2f2;
+}
+.places-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.places-container .box{
+  position: relative;
+
+}
+.place-img{
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.place-img img{
+  width: 100%;
+  height: 100%;
+}
+.place-img img:hover{
+  transform:scale(1.1);
+  transition: 1s;
+}
+
+.place-text{
+  position: absolute;
+  bottom:1rem;
+  left:1rem;
+}
+
+.place-text h2{
+  color: #fff;
+font-size: 1rem;
+font-weight: 400;
+}
+.place-icon{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding:10px;
+  background-color: #0ba441;
+  color: #fff;
+  font-size:20px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+.grid-item {
+ 
+  display: flex; /* Make items flex containers */
+  align-items:start; /* Align content vertically */
+  justify-content: center; /* Align content horizontally */
+}
+.grid-item ul li{
+ list-style: circle;
+  align-items: flex-end;
+}
+.footer {
+ 
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.barangay-list {
+  width: 40%;
+  padding: 10px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.footer-links {
+  width: 60%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.link-section,
+.social-media {
+  width: 100%; /* Make sections take full width */
+  padding: 10px;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.link-section ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.social-media {
+  display: flex;
+
+  a {
+    margin-right: 10px;
+    color: #000;
+  }
+
+  i {
+    font-size: 24px;
+  }
+}
