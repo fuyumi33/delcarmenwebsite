@@ -434,6 +434,45 @@ font-weight: 400;
     font-size: 40px;
   }
 }
+@media (max-width:414px){
+  header{
+    padding: 12px 4%
+  }
+  #menu-icon{
+    color:  #0baa41;
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    width: 240px;
+    height: 100vh;
+    top:100%;
+    right:-100%;
+    flex-direction: column;
+    background: #fff;
+    row-gap: 1.4rem;
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s ease;
+    text-align: left;
+  }
+  .navbar a{
+    color:  #0baa41;
+  }
+  .navbar a::after{
+    display:none;
+  }
+  .navbar.active{
+    right: 0;
+  }
+
+  .nw-banner h1{
+    font-size: 40px;
+  }
+}
+
+
 
 .nw-box{
   display: grid;
