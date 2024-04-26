@@ -3,11 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quezon Secret Lagoon</title>
+  <title>Barangay Cancohoy</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+     .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination{
+      color: white !important;
+
+      
+    }
+    .swiper-pagination{
+      font-size: 20px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -29,25 +62,32 @@
 
 <section class="post-header">
   <div class="header-content post-containers">
-    <h1 class="header-title">Quezon Secret Lagoon</h1>
-    <img src="img/quezons.jpeg" class="header-img">
+    <h1 class="header-title">Barangay Cancohoy</h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/can1.jpg"></div>
+        <div class="swiper-slide"><img src="img/can2.jpg"></div>
+        <div class="swiper-slide"><img src="img/can3.jpg"></div>
+        <div class="swiper-slide"><img src="img/can4.jpg"></div>
+        <div class="swiper-slide"><img src="img/can5.jpg"></div>
+        <div class="swiper-slide"><img src="img/can6.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
   
 <section class="post-content post-containers">
-<h1 class="sub-heading"> 
-  Unveiling Paradise: Quezon Lagoon, Del Carmen, Siargao</h1>
-<p class="post-text">Siargao Island is renowned for its breathtaking coastlines and world-class surfing, but nestled amidst this paradise is a hidden gem waiting to be discovered: Quezon Lagoon. This haven of tranquility offers a captivating contrast to the island's energetic waves.</p><p class="post-text"> across the lagoon's mirror-like surface, enveloped by lush greenery and vibrant ecosystems. Breathe in the fresh air and let the gentle rhythm of the water wash away your worries. Quezon Lagoon is a sanctuary for nature enthusiasts, a place to reconnect with yourself and the beauty that surrounds you.</p>
 
-<h1 class="sub-heading">Dive into Adventure: Activities Await at Quezon Lagoon</h1>
-<p class="post-text">Quezon Lagoon is more than just a scenic escape. It's a playground for adventure seekers! Plunge into the crystal-clear waters, perfect for swimming, diving, or exploring the vibrant coral reefs teeming with life. </p><p class="post-text">Adrenaline junkies can test their limits with exciting water sports, while nature lovers can embark on guided tours through the surrounding mangroves, spotting exotic birds and unique wildlife. Whether you crave relaxation or exhilarating experiences, Quezon Lagoon offers something for everyone. So, come and discover the magic that awaits at this unforgettable lagoon paradise!</p>
-<br>
-<p class="post-text"><strong>Entrance Fee :</strong>    50 pesos</p>
+<p class="post-text">Cancohoy is a barangay in the municipality of Del Carmen, in the province of Surigao del Norte. Its population as determined by the 2020 Census was 888. This represented 4.41% of the total population of Del Carmen.</p>
+
 </section>
 
 <section id="map">
   <div style="margin-top: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);" >
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.3309468313128!2d125.89792673865446!3d9.906370163489765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3306a9f6f34785d3%3A0xdcb0f8f5063ad5b9!2sSugba%20Lagoon!5e0!3m2!1sfil!2sph!4v1714051687206!5m2!1sfil!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31445.587888817383!2d125.99264787473972!3d9.8756435543639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x330406b9ffe61e1d%3A0x208101e2659410ab!2sCancohoy%2C%20Lalawigan%20ng%20Surigao%20del%20Norte!5e0!3m2!1sfil!2sph!4v1714100316426!5m2!1sfil!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </section>
 <footer class="footer">
@@ -58,7 +98,7 @@
     <li>Bagakay (Alburo)</li>
     <li>Bitoon</li>
     <li>Cabugao</li>
-    
+   
     <li>Caub</li>
     <li>Del Carmen (Pob.)</li>
     <li>Domoyog</li>
@@ -104,7 +144,17 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script src="main.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
 </body>
 </html>
