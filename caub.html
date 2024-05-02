@@ -3,11 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esuroy : Municipality of Del Carmen 2.1</title>
+  <title>Barangay Caub</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+     .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination{
+      color: white !important;
+
+      
+    }
+    .swiper-pagination{
+      font-size: 20px;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,25 +52,43 @@
 
     <ul class="navbar">
     <li><a href="" class="home-active">Home</a></li>
-    <li><a href="#nu">New & Updates</a></li>
+    <li><a href="news.html">New & Updates</a></li>
     <li><a href="#map" >Map</a></li>
-    <li><a href="#places">Tourist Spot</a></li>
-    <li><a href="#acc">Accommodation</a></li>
+    <li><a href="touristspot.html">Tourist Spot</a></li>
     <li><a href="history.html">History</a></li>
     <li><a href="delicacies.html">Delicacies</a></li>
     </ul>
 
 </header>
 
+<section class="post-header">
+  <div class="header-content post-containers">
+    <h1 class="header-title">Barangay Caub</h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/caub1.jpg"></div>
+        <div class="swiper-slide"><img src="img/caub2.jpg"></div>
+        <div class="swiper-slide"><img src="img/caub3.jpg"></div>
+        <div class="swiper-slide"><img src="img/caub4.jpg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+  
+<section class="post-content post-containers">
 
-<section
- class="banner">
-<p>
-  tag
-</p>
+<p class="post-text">Caub is a barangay in the municipality of Del Carmen, in the province of Surigao del Norte. Its population as determined by the 2023 Census was 2,009. It has a land area of 3,606 sq km</p>
+
 </section>
 
-
+<section id="map">
+  <div style="margin-top: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.349986005578!2d125.89113228993315!3d9.905823431052337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3306a9f64a0bc275%3A0xae8cc02d6bdf514b!2sCaub%2C%20Bayan%20ng%20Del%20Carmen%2C%20Lalawigan%20ng%20Surigao%20del%20Norte!5e0!3m2!1sfil!2sph!4v1714663893120!5m2!1sfil!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
 <footer class="footer">
   <div class="footer-box">
     <h3>Barangay List</h3>
@@ -57,7 +108,7 @@
     <a href="jamoyaon.html" style="color:black"><li>Jamoyaon</li></a>
     <li>Katipunan</li>
     <li>Lobogon</li>
-    <a href="sanjose.html" style="color:black"><li>Mabuhay</li></a>
+    <a href="mabuhay.html" style="color:black"><li>Mabuhay</li></a>
     <li>Mahayahay</li>
     <li>Quezon</li>
     <li>San Fernando</li>
@@ -79,6 +130,7 @@
     
   </div>
   <div class="footer-box">
+    <h3>Government Links</h3>
     <a href="https://m.facebook.com/DelCarmenFS" style="color:black"><li>BFP</li></a>
     <a href="https://www.facebook.com/p/Del-Carmen-Municipal-Police-Station-100069348934275/" style="color:black"><li>PNP</li></a>
     <a href="https://www.dswd.gov.ph/" style="color:black"><li>DSWD</li></a>
@@ -88,9 +140,20 @@
 </footer>
 
 
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script src="main.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
 </body>
 </html>
