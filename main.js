@@ -30,3 +30,13 @@ var swiper = new Swiper(".home", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+  // Get the dropdown elements
+  const dropdownBtn = document.querySelector('.dropdown');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  // Add a click event listener to the button
+  dropdownBtn.addEventListener('click', function() {
+    dropdownContent.classList.toggle('show'); // Toggle the 'show' class
+  });

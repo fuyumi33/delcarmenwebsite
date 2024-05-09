@@ -621,3 +621,29 @@ font-weight: 400;
   margin:1rem 0;
   text-align: justify;
 }
+
+
+.dropdown {
+  position: relative; /* Needed for proper positioning */
+  display: inline-block; /* Maintain inline behavior */
+}
+
+.dropdown-content {
+  display: none; /* Hide the content initially */
+  position: absolute; /* Position the content relative to the button */
+  background-color: #f1f1f1; /* Set background color */
+  min-width: 160px; /* Set minimum width for the menu */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a shadow effect */
+  z-index: 1; /* Ensure the menu appears above other elements */
+}
+
+.dropdown-content a {
+  color: #0baa41; /* Set text color */
+  padding: 12px 16px; /* Add padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the content block-level */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the content on hover */
+}
